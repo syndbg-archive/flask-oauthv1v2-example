@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        {% if user %}
+            <p>You're authenticated as {{ user }} and you should have a session id <strong>{{ user.id }}</strong></p>
+        {% else %}
+            <p>You're not authenticated</p>
+        {% endif %}
+
+        <p>Username:</p>
+        <form id="create_user" action="/" method="post">
+            <input type="text" name="username" value="">
+            <input type="submit">
+        </form>
+    </body>
+</html>
